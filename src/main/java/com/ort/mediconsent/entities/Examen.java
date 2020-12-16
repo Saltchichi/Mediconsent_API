@@ -12,9 +12,17 @@ public class Examen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_examen;
 
-    @ManyToMany
-    @JoinColumn(name = "id_utilisateur", table = "utilisateur")
-    private Utilisateur utilisateur;
+    @OneToMany
+    @JoinColumn(name = "id_type_examen", table = "type_examen")
+    private Type_examen type_examen;
+
+    @OneToMany
+    @JoinColumn(name = "id_etablissement", table = "etablissement")
+    private Etablissement etablissement;
+
+    @OneToOne
+    @JoinColumn(name = "id_avis", table = "avis")
+    private Avis avis;
 
     @Column(name = "date_examen")
     private Date date_examen;
