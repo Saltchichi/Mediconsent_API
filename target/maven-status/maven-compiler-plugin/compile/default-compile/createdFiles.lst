@@ -1,2 +1,15 @@
 com\ort\mediconsent\MyApplication.class
+com\ort\mediconsent\entities\Etablissement_utilisateur.class
 com\ort\mediconsent\entities\Utilisateur.class
+com\ort\mediconsent\controllers\rest\UtilisateurController.class
+com\ort\mediconsent\entities\Question.class
+com\ort\mediconsent\entities\Examen.class
+com\ort\mediconsent\repositories\UtilisateurRepository.class
+com\ort\mediconsent\services\UtilisateurServices.class
+com\ort\mediconsent\entities\Avis.class
+com\ort\mediconsent\entities\Fonctionnalite.class
+com\ort\mediconsent\entities\Type_examen.class
+com\ort\mediconsent\entities\Role.class
+com\ort\mediconsent\controllers\mvc\UtilisateurWebController.class
+com\ort\mediconsent\entities\Langage.class
+com\ort\mediconsent\entities\Etablissement.class

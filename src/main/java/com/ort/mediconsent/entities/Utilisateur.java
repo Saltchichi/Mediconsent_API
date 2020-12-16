@@ -17,9 +17,17 @@ public class Utilisateur {
     @Column(name = "prenom_utilisateur")
     private String prenom_utilisateur;
 
-    @@Column(name = "mot_de_passe_utilisateur")
+    @Column(name = "mot_de_passe_utilisateur")
     private String mot_de_passe_utilisateur;
 
-    @@Column(name = "numero_securite_sociale")
+    @Column(name = "numero_securite_sociale")
     private Long numero_securite_sociale;
+
+    public Utilisateur() {
+    }
+
+    public Utilisateur(String nom_utilisateur, String prenom_utilisateur) {
+        this.nom_utilisateur = nom_utilisateur;
+        this.prenom_utilisateur = prenom_utilisateur;
+    }
 }
