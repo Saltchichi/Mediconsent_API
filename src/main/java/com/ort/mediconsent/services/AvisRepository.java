@@ -13,7 +13,7 @@ public class AvisRepository {
         return AvisRepository.findAll();
     }
 
-    public Avis getAvisById(Long id) {
+   /* public Avis getAvisById(Long id) {
         return AvisRepository.findById(id);
-    }
+    }*/
 }

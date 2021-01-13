@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="mediconsent@localhost" uuid="8ed337fb-1a5c-40e2-805d-7862bfc8bd40">
+    <data-source source="LOCAL" name="mediconsent@localhost" uuid="70442535-affb-4da7-8195-52774f615b96">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/mediconsent</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
       <driver-properties>
         <property name="serverTimezone" value="UTC" />
       </driver-properties>

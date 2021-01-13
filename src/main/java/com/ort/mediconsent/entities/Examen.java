@@ -12,16 +12,16 @@ public class Examen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_examen;
 
-    @OneToMany
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "id_type_examen", table = "type_examen")
     private Type_examen type_examen;
 
-    @OneToMany
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "id_etablissement", table = "etablissement")
     private Etablissement etablissement;
 
-    @OneToOne
-    @JoinColumn(name = "id_avis", table = "avis")
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "id_avis", table = "Avis")
     private Avis avis;
 
     @Column(name = "date_examen")
