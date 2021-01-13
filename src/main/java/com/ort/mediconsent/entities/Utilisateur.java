@@ -69,4 +69,13 @@ public class Utilisateur {
         this.nom_utilisateur = nom_utilisateur;
         this.prenom_utilisateur = prenom_utilisateur;
     }
+
+    @Override
+    public String toString() {
+        return "Utilisateur{"+"id=" + this.id_utilisateur
+                + ", nom='" + this.nom_utilisateur
+                + ", prenom='" + this.prenom_utilisateur
+                + ", n°Secu='" + this.numero_securite_sociale
+                + "}";
+    }
 }
