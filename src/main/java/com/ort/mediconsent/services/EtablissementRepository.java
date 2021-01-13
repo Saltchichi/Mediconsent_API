@@ -14,6 +14,6 @@ public class EtablissementRepository {
     }
 
     public Etablissement getEtablissementById(Long id) {
-        return EtablissementRepository.findById(id).orElse(null);
+        return EtablissementRepository.findById(id);
     }
 }

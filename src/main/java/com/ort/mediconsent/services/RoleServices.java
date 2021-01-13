@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
+
 public class RoleServices {
     @Autowired
     private com.ort.mediconsent.repositories.RoleRepository RoleRepository;
@@ -14,6 +15,6 @@ public class RoleServices {
     }
 
     public Role getRolesById(Long id) {
-        return RoleRepository.findById(id).orElse(null);
+        return RoleRepository.findById(id);
     }
 }

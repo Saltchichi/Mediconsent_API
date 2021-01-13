@@ -1,5 +1,5 @@
-C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\Etablissement_utilisateurRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Question.java
+C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\RoleRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\EtablissementRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\Type_examenServices.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Question_formulaire.java
@@ -9,8 +9,6 @@ C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Formulaire.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\ExamenRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\QuestionRepository.java
-C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\Role_Repository.java
-C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\Etablissement_utilisateurRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Type_examen.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\AvisRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Reponse.java
@@ -19,6 +17,7 @@ C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\FonctionnaliteRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\Type_examenRepository.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\MyApplication.java
+C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\RoleServices.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\controllers\rest\UtilisateurController.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Fonctionnalite.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\QuestionRepository.java
@@ -34,5 +33,4 @@ C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Examen.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\entities\Utilisateur.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\UtilisateurServices.java
-C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\services\Role_Services.java
 C:\Users\Alexandre\Documents\spring workspace\Mediconsent\src\main\java\com\ort\mediconsent\repositories\ExamenRepository.java
