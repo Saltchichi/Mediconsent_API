@@ -11,11 +11,11 @@ public class Type_examen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_type_examen;
 
-    @Column(name = "libelle_type_examen")
-    private String libelle_type_examen;
+    @Column(name = "type_examen")
+    private String type_examen;
 
     @OneToOne
-    @JoinColumn(name = "id_formulaire", table = "formulaire")
+    @JoinColumn(name = "id_formulaire")
     private Formulaire formulaire;
 
     public Long getId_type_examen() {
@@ -27,11 +27,11 @@ public class Type_examen {
     }
 
     public String getLibelle_type_examen() {
-        return libelle_type_examen;
+        return type_examen;
     }
 
     public void setLibelle_type_examen(String libelle_type_examen) {
-        this.libelle_type_examen = libelle_type_examen;
+        this.type_examen = libelle_type_examen;
     }
 
     public Formulaire getFormulaire() {
@@ -45,7 +45,7 @@ public class Type_examen {
     public Type_examen(){}
 
     public Type_examen(String libelle_type_examen, Formulaire formulaire) {
-        this.libelle_type_examen = libelle_type_examen;
+        this.type_examen = libelle_type_examen;
         this.formulaire = formulaire;
     }
 }

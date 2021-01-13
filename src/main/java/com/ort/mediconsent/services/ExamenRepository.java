@@ -13,7 +13,7 @@ public class ExamenRepository {
         return ExamenRepository.findAll();
     }
 
-    public Examen getExamenById(Long id) {
+    /*public Examen getExamenById(Long id) {
         return ExamenRepository.findById(id);
-    }
+    }*/
 }

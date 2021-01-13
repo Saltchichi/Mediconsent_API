@@ -13,7 +13,7 @@ public class Formulaire {
     private Long id_formulaire;
 
     @OneToOne
-    @JoinColumn(name = "id_langage", table = "langage")
+    @JoinColumn(name = "id_langage")
     private Langage langage;
 
     @Column(name = "libelle_formulaire")

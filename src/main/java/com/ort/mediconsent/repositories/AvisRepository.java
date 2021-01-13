@@ -14,5 +14,5 @@ public interface AvisRepository extends JpaRepository<Avis, Long> {
 
     void deleteById(Long id_avis);
 
-    Avis findByNote(Long notes);
+    //Avis findByNotes(Long notes);
 }

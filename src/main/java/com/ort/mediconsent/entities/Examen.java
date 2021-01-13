@@ -13,15 +13,15 @@ public class Examen {
     private Long id_examen;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "id_type_examen", table = "type_examen")
+    @JoinColumn(name = "id_type_examen")
     private Type_examen type_examen;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "id_etablissement", table = "etablissement")
+    @ManyToOne
+    @JoinColumn(name = "id_etablissement")
     private Etablissement etablissement;
 
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "id_avis", table = "Avis")
+    @JoinColumn(name = "id_avis")
     private Avis avis;
 
     @Column(name = "date_examen")

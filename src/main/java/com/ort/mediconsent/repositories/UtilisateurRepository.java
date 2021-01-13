@@ -8,8 +8,8 @@ import java.util.Optional;
 
 @Repository
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
-    public Utilisateur findByUsername(String nom_utilisateur);
+    //public Utilisateur findByUsername(String nom_utilisateur);
     Optional<Utilisateur> findById(Long id_utilisateur);
     void deleteById(Long id_type_examen);
-    Utilisateur findByLibelle(String libelle_type_examen);
+    //Utilisateur findByLibelle(String libelle_type_examen);
 }

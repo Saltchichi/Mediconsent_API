@@ -13,7 +13,7 @@ public class LangageRepository {
         return LangageRepository.findAll();
     }
 
-    public Langage getLangageById(Long id) {
+    /*public Langage getLangageById(Long id) {
         return LangageRepository.findById(id);
-    }
+    }*/
 }

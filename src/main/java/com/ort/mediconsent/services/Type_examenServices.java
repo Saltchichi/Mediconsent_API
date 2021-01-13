@@ -13,7 +13,7 @@ public class Type_examenServices {
         return Type_examenRepository.findAll();
     }
 
-    public Type_examen getType_examenById(Long id) {
+    /*public Type_examen getType_examenById(Long id) {
         return Type_examenRepository.findById(id);
-    }
+    }*/
 }

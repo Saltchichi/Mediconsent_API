@@ -12,11 +12,11 @@ public class Reponse {
     private Long id_reponse;
 
     @OneToOne
-    @JoinColumn(name = "id_examen", table = "examen")
+    @JoinColumn(name = "id_examen")
     private Examen examen;
 
     @OneToOne
-    @JoinColumn(name = "id_question", table = "question")
+    @JoinColumn(name = "id_question")
     private Question question;
 
     @Column(name = "reponse")

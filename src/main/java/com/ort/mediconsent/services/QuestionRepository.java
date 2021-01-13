@@ -13,7 +13,7 @@ public class QuestionRepository {
         return QuestionRepository.findAll();
     }
 
-    public Question getQuestionById(Long id) {
+    /*public Question getQuestionById(Long id) {
         return QuestionRepository.findById(id);
-    }
+    }*/
 }

@@ -13,7 +13,7 @@ public class EtablissementRepository {
         return EtablissementRepository.findAll();
     }
 
-    public Etablissement getEtablissementById(Long id) {
+    /*public Etablissement getEtablissementById(Long id) {
         return EtablissementRepository.findById(id);
-    }
+    }*/
 }

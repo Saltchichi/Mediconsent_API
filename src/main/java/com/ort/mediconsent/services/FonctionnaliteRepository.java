@@ -13,7 +13,7 @@ public class FonctionnaliteRepository {
         return FonctionnaliteRepository.findAll();
     }
 
-    public Fonctionnalite getFonctionnaliteById(Long id) {
+    /*public Fonctionnalite getFonctionnaliteById(Long id) {
         return FonctionnaliteRepository.findById(id);
-    }
+    }*/
 }
