@@ -63,8 +63,7 @@ public class Utilisateur {
         this.numero_securite_sociale = numero_securite_sociale;
     }
 
-    public Utilisateur() {
-    }
+    public Utilisateur() {}
 
     public Utilisateur(String nom_utilisateur, String prenom_utilisateur) {
         this.nom_utilisateur = nom_utilisateur;

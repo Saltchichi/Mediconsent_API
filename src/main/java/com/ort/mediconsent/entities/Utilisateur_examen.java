@@ -13,4 +13,6 @@ public class Utilisateur_examen {
     @ManyToOne
     @JoinColumn(name = "id_examen", table = "examen")
     private Examen examen;
+
+
 }
