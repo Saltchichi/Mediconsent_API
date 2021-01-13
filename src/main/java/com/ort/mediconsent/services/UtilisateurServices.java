@@ -1,11 +1,8 @@
 package com.ort.mediconsent.services;
 
 import com.ort.mediconsent.entities.Utilisateur;
-import com.sun.crypto.provider.PBKDF2HmacSHA1Factory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.DigestUtils;
 
-import javax.crypto.spec.PBEKeySpec;
 import java.util.List;
 
 public class UtilisateurServices {
