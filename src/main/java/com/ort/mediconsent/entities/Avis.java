@@ -14,7 +14,7 @@ public class Avis {
     @Column(name = "notes")
     private Long notes;
 
-    @Column(name = "commentaires")
-    private String commentaires;
+    @Column(name = "commentaire")
+    private String commentaire;
 
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
     public Utilisateur findByUsername(String nom_utilisateur);
-    Utilisateur findById(Long id_utilisateur);
+    //Utilisateur findById(Long id_utilisateur);
     void deleteById(Long id_type_examen);
     Utilisateur findByLibelle(String libelle_type_examen);
 }
