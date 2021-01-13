@@ -1,4 +1,4 @@
 package com.ort.mediconsent.services;
 
-public class TypeexamenServices {
+public class Type_examenServices {
 }
