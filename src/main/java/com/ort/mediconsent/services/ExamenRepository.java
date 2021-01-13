@@ -14,6 +14,6 @@ public class ExamenRepository {
     }
 
     public Examen getExamenById(Long id) {
-        return ExamenRepository.findById(id).orElse(null);
+        return ExamenRepository.findById(id);
     }
 }

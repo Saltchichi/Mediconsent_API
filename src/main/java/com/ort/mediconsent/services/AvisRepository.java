@@ -14,6 +14,6 @@ public class AvisRepository {
     }
 
     public Avis getAvisById(Long id) {
-        return AvisRepository.findById(id).orElse(null);
+        return AvisRepository.findById(id);
     }
 }

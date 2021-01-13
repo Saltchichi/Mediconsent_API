@@ -14,6 +14,6 @@ public class FonctionnaliteRepository {
     }
 
     public Fonctionnalite getFonctionnaliteById(Long id) {
-        return FonctionnaliteRepository.findById(id).orElse(null);
+        return FonctionnaliteRepository.findById(id);
     }
 }

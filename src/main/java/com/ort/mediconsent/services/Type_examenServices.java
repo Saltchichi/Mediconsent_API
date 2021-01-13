@@ -14,6 +14,6 @@ public class Type_examenServices {
     }
 
     public Type_examen getType_examenById(Long id) {
-        return Type_examenRepository.findById(id).orElse(null);
+        return Type_examenRepository.findById(id);
     }
 }

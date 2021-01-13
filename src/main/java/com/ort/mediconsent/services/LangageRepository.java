@@ -14,6 +14,6 @@ public class LangageRepository {
     }
 
     public Langage getLangageById(Long id) {
-        return LangageRepository.findById(id).orElse(null);
+        return LangageRepository.findById(id);
     }
 }
