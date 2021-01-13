@@ -3,11 +3,11 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Utilisateur;
 import com.ort.mediconsent.repositories.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class UtilisateurController {
@@ -15,7 +15,7 @@ public class UtilisateurController {
     UtilisateurRepository utilisateurRepository;
 
     @RequestMapping(path = "/rest/utilisateurs", method = RequestMethod.GET)
-    public Page<Utilisateur> getUsers(int page, int size) {
-        return utilisateurRepository.findAll(PageRequest.of(page, size));
+    public List<Utilisateur> getUsers() {
+        return utilisateurRepository.findAll();
     }
 }
