@@ -27,7 +27,7 @@ public class UtilisateurController {
         utilisateurRepository.deleteById(id);
     }
 
-    @RequestMapping(path = "/rest/user/save", method = RequestMethod.PUT)
+    @RequestMapping(path = "/rest/utilisateur/save", method = RequestMethod.PUT)
     public Utilisateur save(@RequestBody Utilisateur utilisateur) {
         return utilisateurRepository.save(utilisateur);
     }
