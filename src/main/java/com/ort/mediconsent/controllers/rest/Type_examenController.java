@@ -3,10 +3,7 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Type_examen;
 import com.ort.mediconsent.repositories.Type_examenRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,11 @@ public class Type_examenController {
     @RequestMapping(path = "/rest/type_examen/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         type_examenRepository.deleteById(id);
+    }
+
+
+    @RequestMapping(path = "/rest/type_examen/save", method = RequestMethod.PUT)
+    public Type_examen save(@RequestBody Type_examen type_examen) {
+        return type_examenRepository.save(type_examen);
     }
 }

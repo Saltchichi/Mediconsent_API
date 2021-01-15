@@ -3,10 +3,7 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Langage;
 import com.ort.mediconsent.repositories.LangageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,10 @@ public class LangageController {
     @RequestMapping(path = "/rest/langage/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         langageRepository.deleteById(id);
+    }
+
+    @RequestMapping(path = "/rest/langage/save", method = RequestMethod.PUT)
+    public Langage save(@RequestBody Langage langage) {
+        return langageRepository.save(langage);
     }
 }

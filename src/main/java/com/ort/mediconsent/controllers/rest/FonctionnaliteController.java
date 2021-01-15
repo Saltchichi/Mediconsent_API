@@ -3,10 +3,7 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Fonctionnalite;
 import com.ort.mediconsent.repositories.FonctionnaliteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,10 @@ public class FonctionnaliteController {
     @RequestMapping(path = "/rest/fonctionnalite/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         fonctionnaliteRepository.deleteById(id);
+    }
+
+    @RequestMapping(path = "/rest/fonctionnalite/save", method = RequestMethod.PUT)
+    public Fonctionnalite save(@RequestBody Fonctionnalite fonctionnalite) {
+        return fonctionnaliteRepository.save(fonctionnalite);
     }
 }

@@ -3,10 +3,7 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Role;
 import com.ort.mediconsent.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,10 @@ public class RoleController {
     @RequestMapping(path = "/rest/role/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         roleRepository.deleteById(id);
+    }
+
+    @RequestMapping(path = "/rest/role/save", method = RequestMethod.PUT)
+    public Role save(@RequestBody Role role) {
+        return roleRepository.save(role);
     }
 }
