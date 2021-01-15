@@ -24,4 +24,9 @@ public class FonctionnaliteController {
     public Fonctionnalite getFonctionnalite(@PathVariable Long id) {
         return fonctionnaliteRepository.findById(id).orElse(null);
     }
+
+    @RequestMapping(path = "/rest/fonctionnalite/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable Long id) {
+        fonctionnaliteRepository.deleteById(id);
+    }
 }

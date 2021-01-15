@@ -24,4 +24,9 @@ public class AvisController {
     public Avis getAvi(@PathVariable Long id) {
         return avisRepository.findById(id).orElse(null);
     }
+
+    @RequestMapping(path = "/rest/avis/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable Long id) {
+        avisRepository.deleteById(id);
+    }
 }

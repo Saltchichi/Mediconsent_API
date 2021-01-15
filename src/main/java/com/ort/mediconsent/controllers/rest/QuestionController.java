@@ -24,4 +24,9 @@ public class QuestionController {
     public Question getQuestion(@PathVariable Long id) {
         return questionRepository.findById(id).orElse(null);
     }
+
+    @RequestMapping(path = "/rest/question/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable Long id) {
+        questionRepository.deleteById(id);
+    }
 }

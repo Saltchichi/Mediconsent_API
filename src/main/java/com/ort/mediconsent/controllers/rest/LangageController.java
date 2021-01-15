@@ -24,4 +24,9 @@ public class LangageController {
     public Langage getLangage(@PathVariable Long id) {
         return langageRepository.findById(id).orElse(null);
     }
+
+    @RequestMapping(path = "/rest/langage/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable Long id) {
+        langageRepository.deleteById(id);
+    }
 }
