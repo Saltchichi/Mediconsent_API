@@ -3,9 +3,8 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Utilisateur;
 import com.ort.mediconsent.repositories.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,4 +17,13 @@ public class UtilisateurController {
     public List<Utilisateur> getUsers() {
         return utilisateurRepository.findAll();
     }
+
+    @GetMapping("/rest/utilisateurs/{id}")
+    public String getUserById(@PathVariable(value = "id") Iterable id, Model model) {
+        model.addAttribute("user", utilisateurRepository.findAllById(id));
+        model.addAttribute("id", id);
+        return "user";
+    }
+
+
 }
