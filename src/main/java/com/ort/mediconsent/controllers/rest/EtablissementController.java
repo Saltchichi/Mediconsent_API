@@ -1,18 +1,21 @@
 package com.ort.mediconsent.controllers.rest;
 
 import com.ort.mediconsent.entities.Etablissement;
+import com.ort.mediconsent.repositories.EtablissementRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RestController
 public class EtablissementController {
     @Autowired
-    com.ort.mediconsent.repositories.EtablissementRepository EtablissementRepository;
+    EtablissementRepository etablissementRepository;
 
     @RequestMapping(path = "/rest/etablissements", method = RequestMethod.GET)
-    public List<Etablissement> getUsers() {
-        return EtablissementRepository.findAll();
+    public List<Etablissement> getEtablissement() {
+        return etablissementRepository.findAll();
     }
 }
