@@ -21,8 +21,14 @@ public class UtilisateurController {
     public Utilisateur getUser(@PathVariable Long id) {
         return utilisateurRepository.findById(id).orElse(null);
     }
-    @RequestMapping(path = "/rest/user/{id}", method = RequestMethod.DELETE)
+
+    @RequestMapping(path = "/rest/utilisateur/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         utilisateurRepository.deleteById(id);
+    }
+
+    @RequestMapping(path = "/rest/utilisateur/save", method = RequestMethod.PUT)
+    public Utilisateur save(@RequestBody Utilisateur user) {
+        return utilisateurRepository.save(user);
     }
 }

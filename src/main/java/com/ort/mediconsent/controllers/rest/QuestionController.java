@@ -3,10 +3,7 @@ package com.ort.mediconsent.controllers.rest;
 import com.ort.mediconsent.entities.Question;
 import com.ort.mediconsent.repositories.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -28,5 +25,10 @@ public class QuestionController {
     @RequestMapping(path = "/rest/question/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         questionRepository.deleteById(id);
+    }
+
+    @RequestMapping(path = "/rest/question/save", method = RequestMethod.PUT)
+    public Question save(@RequestBody Question question) {
+        return questionRepository.save(question);
     }
 }
