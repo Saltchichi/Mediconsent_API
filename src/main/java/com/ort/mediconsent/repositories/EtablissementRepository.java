@@ -8,7 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EtablissementRepository extends JpaRepository<Etablissement, Long> {
-    //Etablissement findById(Long id_etablissement);
-    void deleteById(Long id_etablissement);
-    //Etablissement findByNom_etablissement(String nom_etablissement);
+
 }

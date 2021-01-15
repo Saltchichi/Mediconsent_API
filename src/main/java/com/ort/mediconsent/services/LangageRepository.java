@@ -9,11 +9,4 @@ public class LangageRepository {
     @Autowired
     private com.ort.mediconsent.repositories.LangageRepository LangageRepository;
 
-    public List<Langage> getLangages() {
-        return LangageRepository.findAll();
-    }
-
-    /*public Langage getLangageById(Long id) {
-        return LangageRepository.findById(id);
-    }*/
 }

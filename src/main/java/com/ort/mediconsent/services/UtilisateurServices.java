@@ -9,11 +9,7 @@ public class UtilisateurServices {
     @Autowired
     private com.ort.mediconsent.repositories.UtilisateurRepository UtilisateurRepository;
 
-    public List<Utilisateur> getUsers() {
-        return UtilisateurRepository.findAll();
-    }
-
-    public Utilisateur saveUser(Utilisateur user) {
+    public Utilisateur save(Utilisateur user) {
         if (user.getMot_de_passe_utilisateur() != null) {
             //TODO set the encrypted user password
             /*user.setMot_de_passe_utilisateur(DigestUtils.md5Hex(user.getMot_de_passe_utilisateur()));*/
@@ -21,19 +17,7 @@ public class UtilisateurServices {
         return UtilisateurRepository.save(user);
     }
 
-    public Utilisateur getUserById(Long id) {
-        return UtilisateurRepository.findById(id).orElse(null);
-    }
-
-    public void addUser(String nom_utilisateur, String prenom_utilisateur) {
-        UtilisateurRepository.save(new Utilisateur(nom_utilisateur, prenom_utilisateur));
-    }
-
-    public void addUser(Utilisateur user) {
-        addUser(user.getNom_utilisateur(), user.getPrenom_utilisateur());
-    }
-
-    public void removeUser(Long id) {
+    public void deleteUser(Long id) {
         UtilisateurRepository.deleteById(id);
     }
 

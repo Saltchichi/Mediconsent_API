@@ -9,11 +9,4 @@ public class EtablissementRepository {
     @Autowired
     private com.ort.mediconsent.repositories.EtablissementRepository EtablissementRepository;
 
-    public List<Etablissement> getEtablissements() {
-        return EtablissementRepository.findAll();
-    }
-
-    /*public Etablissement getEtablissementById(Long id) {
-        return EtablissementRepository.findById(id);
-    }*/
 }

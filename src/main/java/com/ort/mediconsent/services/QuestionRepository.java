@@ -9,11 +9,4 @@ public class QuestionRepository {
     @Autowired
     private com.ort.mediconsent.repositories.QuestionRepository QuestionRepository;
 
-    public List<Question> getQuestions() {
-        return QuestionRepository.findAll();
-    }
-
-    /*public Question getQuestionById(Long id) {
-        return QuestionRepository.findById(id);
-    }*/
 }

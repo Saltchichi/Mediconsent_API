@@ -25,7 +25,7 @@ public class EtablissementController {
         return etablissementRepository.findById(id).orElse(null);
     }
 
-    @RequestMapping(path = "/rest/etablissement/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path = "/rest/etablissement/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         etablissementRepository.deleteById(id);
     }

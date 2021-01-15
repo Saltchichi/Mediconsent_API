@@ -8,7 +8,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Type_examenRepository extends JpaRepository<Type_examen, Long> {
-    //Type_examen findById(Long id_type_examen);
-    void deleteById(Long id_type_examen);
-    //Type_examen findByType_examen(String libelle_type_examen);
 }

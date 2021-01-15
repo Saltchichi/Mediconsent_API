@@ -8,9 +8,4 @@ import java.util.List;
 
 @Repository
 public interface AvisRepository extends JpaRepository<Avis, Long> {
-    //Avis findById(Long id_avis);
-
-    void deleteById(Long id_avis);
-
-    //Avis findByNotes(Long notes);
 }

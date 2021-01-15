@@ -8,7 +8,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LangageRepository extends JpaRepository<Langage, Long> {
-    //Langage findById(Long id_langage);
-    void deleteById(Long id_langage);
-    //Langage findByLibelle_langage(String libelle_langage);
 }

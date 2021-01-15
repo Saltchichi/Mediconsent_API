@@ -25,7 +25,7 @@ public class QuestionController {
         return questionRepository.findById(id).orElse(null);
     }
 
-    @RequestMapping(path = "/rest/question/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path = "/rest/question/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         questionRepository.deleteById(id);
     }

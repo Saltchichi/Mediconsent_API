@@ -11,7 +11,4 @@ import java.util.List;
 
 @Repository
 public interface RoleRepository extends JpaRepository<Role, Long> {
-    //Role findById(Long id_role);
-    void deleteById(Long id_role);
-    //Role findByLibelle_role(String libelle_role);
 }

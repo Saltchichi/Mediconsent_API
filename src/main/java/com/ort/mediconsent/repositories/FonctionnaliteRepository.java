@@ -8,7 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FonctionnaliteRepository extends JpaRepository<Fonctionnalite, Long> {
-    //Fonctionnalite findById(Long id_fonctionnalite);
-    void deleteById(Long id_fonctionnalite);
-    //Fonctionnalite findByLibelle(String libelle_fonctionnalite);
+
 }

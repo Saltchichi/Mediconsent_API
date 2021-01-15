@@ -9,11 +9,4 @@ public class AvisRepository {
     @Autowired
     private com.ort.mediconsent.repositories.AvisRepository AvisRepository;
 
-    public List<Avis> getAvis() {
-        return AvisRepository.findAll();
-    }
-
-   /* public Avis getAvisById(Long id) {
-        return AvisRepository.findById(id);
-    }*/
 }

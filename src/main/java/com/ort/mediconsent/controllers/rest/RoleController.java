@@ -25,7 +25,7 @@ public class RoleController {
         return roleRepository.findById(id).orElse(null);
     }
 
-    @RequestMapping(path = "/rest/role/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(path = "/rest/role/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
         roleRepository.deleteById(id);
     }

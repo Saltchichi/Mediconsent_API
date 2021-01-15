@@ -10,11 +10,4 @@ public class RoleServices {
     @Autowired
     private com.ort.mediconsent.repositories.RoleRepository RoleRepository;
 
-    public List<Role> getRoles() {
-        return RoleRepository.findAll();
-    }
-
-    /*public Role getRolesById(Long id) {
-        return RoleRepository.findById(id);
-    }*/
 }
