@@ -9,7 +9,7 @@ public class Type_examenServices {
     @Autowired
     private com.ort.mediconsent.repositories.Type_examenRepository Type_examenRepository;
 
-    public List<Type_examen> getType_examen() {
+    public List<Type_examen> getType_examens() {
         return Type_examenRepository.findAll();
     }
 

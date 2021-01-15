@@ -9,7 +9,7 @@ public class ExamenRepository {
     @Autowired
     private com.ort.mediconsent.repositories.ExamenRepository ExamenRepository;
 
-    public List<Examen> getExamen() {
+    public List<Examen> getExamens() {
         return ExamenRepository.findAll();
     }
 

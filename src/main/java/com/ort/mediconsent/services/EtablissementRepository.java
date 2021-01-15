@@ -9,7 +9,7 @@ public class EtablissementRepository {
     @Autowired
     private com.ort.mediconsent.repositories.EtablissementRepository EtablissementRepository;
 
-    public List<Etablissement> getEtablissement() {
+    public List<Etablissement> getEtablissements() {
         return EtablissementRepository.findAll();
     }
 

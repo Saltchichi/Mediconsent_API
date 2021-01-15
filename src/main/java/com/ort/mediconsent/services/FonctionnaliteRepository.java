@@ -9,7 +9,7 @@ public class FonctionnaliteRepository {
     @Autowired
     private com.ort.mediconsent.repositories.FonctionnaliteRepository FonctionnaliteRepository;
 
-    public List<Fonctionnalite> getFonctionnalite() {
+    public List<Fonctionnalite> getFonctionnalites() {
         return FonctionnaliteRepository.findAll();
     }
 
