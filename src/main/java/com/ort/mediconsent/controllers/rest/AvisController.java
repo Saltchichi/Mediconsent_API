@@ -9,11 +9,11 @@ import java.util.List;
 
 @RestController
 
+@CrossOrigin
 public class AvisController {
     @Autowired
     AvisRepository avisRepository;
 
-    @CrossOrigin
     @RequestMapping(path = "/rest/avis", method = RequestMethod.GET)
     public List<Avis> getAvis() {
         return avisRepository.findAll();
