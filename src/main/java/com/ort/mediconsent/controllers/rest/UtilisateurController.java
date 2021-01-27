@@ -5,6 +5,7 @@ import com.ort.mediconsent.repositories.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -30,6 +31,11 @@ public class UtilisateurController {
     @RequestMapping(path = "/rest/utilisateur/save", method = RequestMethod.PUT)
     public Utilisateur save(@RequestBody Utilisateur utilisateur) {
         return utilisateurRepository.save(utilisateur);
+    }
+
+    @RequestMapping(path = "/rest/utilisateurs/import/csv/{csvfile}", method = RequestMethod.POST)
+    public void saveCsvDataFile(@PathVariable String csvfile) throws IOException {
+        utilisateurRepository.saveCsvDataFile(csvfile);
     }
 
     /*@RequestMapping(path = "/rest/utilisateur/connect/{numero_securite_sociale}", method = RequestMethod.GET)

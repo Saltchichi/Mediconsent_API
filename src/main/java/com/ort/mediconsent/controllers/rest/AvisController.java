@@ -13,7 +13,7 @@ public class AvisController {
     @Autowired
     AvisRepository avisRepository;
 
-    @CrossOrigin(origins = "http://192.168.1.151:8082/mediconsent")
+    @CrossOrigin(origins = "http://194.183.220.41:8082/mediconsent")
     @RequestMapping(path = "/rest/avis", method = RequestMethod.GET)
     public List<Avis> getAvis() {
         return avisRepository.findAll();
