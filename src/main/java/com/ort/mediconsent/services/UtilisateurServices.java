@@ -9,16 +9,16 @@ public class UtilisateurServices {
     @Autowired
     private com.ort.mediconsent.repositories.UtilisateurRepository UtilisateurRepository;
 
-    public Utilisateur save(Utilisateur user) {
+    /*public Utilisateur save(Utilisateur user) {
         if (user.getMot_de_passe_utilisateur() != null) {
             //TODO set the encrypted user password
-            /*user.setMot_de_passe_utilisateur(DigestUtils.md5Hex(user.getMot_de_passe_utilisateur()));*/
+            /*user.setMot_de_passe_utilisateur(DigestUtils.md5Hex(user.getMot_de_passe_utilisateur()));
         }
         return UtilisateurRepository.save(user);
-    }
+    }*/
 
-    public void deleteUser(Long id) {
-        UtilisateurRepository.deleteById(id);
-    }
+    /*public boolean connect(Long numero_securite_sociale){
+        return true;
+    }*/
 
 }

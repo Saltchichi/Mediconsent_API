@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> {
-
+   // boolean connect(Long numero_securite_sociale);
 }

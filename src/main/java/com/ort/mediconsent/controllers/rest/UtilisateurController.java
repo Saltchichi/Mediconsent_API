@@ -31,4 +31,9 @@ public class UtilisateurController {
     public Utilisateur save(@RequestBody Utilisateur utilisateur) {
         return utilisateurRepository.save(utilisateur);
     }
+
+    /*@RequestMapping(path = "/rest/utilisateur/connect/{numero_securite_sociale}", method = RequestMethod.GET)
+    public boolean connect(@PathVariable Long numero_securite_sociale){
+        return utilisateurRepository.connect(numero_securite_sociale);
+    }*/
 }
