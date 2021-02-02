@@ -30,7 +30,8 @@ public class Fonctionnalite {
         this.libelle_fonctionnalite = libelle_fonctionnalite;
     }
 
-    public Fonctionnalite(){}
+    public Fonctionnalite() {
+    }
 
     public Fonctionnalite(String libelle_fonctionnalite) {
         this.libelle_fonctionnalite = libelle_fonctionnalite;

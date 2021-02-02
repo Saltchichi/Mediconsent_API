@@ -9,30 +9,31 @@ public class Langage {
     @Id
     @Column(name = "id_langage")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_fonctionnalite;
+    private Long id_langage;
 
     @Column(name = "libelle_langage")
-    private String libelle_fonctionnalite;
+    private String libelle_langage;
 
-    public Long getId_fonctionnalite() {
-        return id_fonctionnalite;
+    public Long getId_langage() {
+        return id_langage;
     }
 
-    public void setId_fonctionnalite(Long id_fonctionnalite) {
-        this.id_fonctionnalite = id_fonctionnalite;
+    public void setId_langage(Long id_langage) {
+        this.id_langage = id_langage;
     }
 
-    public String getLibelle_fonctionnalite() {
-        return libelle_fonctionnalite;
+    public String getLibelle_langage() {
+        return libelle_langage;
     }
 
-    public void setLibelle_fonctionnalite(String libelle_fonctionnalite) {
-        this.libelle_fonctionnalite = libelle_fonctionnalite;
+    public void setLibelle_langage(String libelle_langage) {
+        this.libelle_langage = libelle_langage;
     }
 
-    public Langage(){}
+    public Langage() {
+    }
 
-    public Langage(String libelle_fonctionnalite) {
-        this.libelle_fonctionnalite = libelle_fonctionnalite;
+    public Langage(String libelle_langage) {
+        this.libelle_langage = libelle_langage;
     }
 }

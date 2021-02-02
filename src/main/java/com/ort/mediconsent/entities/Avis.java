@@ -41,7 +41,8 @@ public class Avis {
         this.commentaire = commentaire;
     }
 
-    public Avis(){}
+    public Avis() {
+    }
 
     public Avis(Long notes, String commentaire) {
         this.notes = notes;

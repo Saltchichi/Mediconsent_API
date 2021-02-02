@@ -1,13 +1,39 @@
 package com.ort.mediconsent.services;
 
 import com.ort.mediconsent.entities.Utilisateur;
+import com.ort.mediconsent.repositories.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import java.io.IOException;
 import java.util.List;
 
+@Service
 public class UtilisateurServices {
     @Autowired
-    private com.ort.mediconsent.repositories.UtilisateurRepository UtilisateurRepository;
+    private UtilisateurRepository utilisateurRepository;
+
+    public List<Utilisateur> findAll() {
+        return utilisateurRepository.findAll();
+    }
+
+    public Utilisateur findById(@PathVariable Long id) {
+        return utilisateurRepository.findById(id).orElse(null);
+    }
+
+    public void deleteById(@PathVariable Long id) {
+        utilisateurRepository.deleteById(id);
+    }
+
+    public Utilisateur save(@RequestBody Utilisateur utilisateur) {
+        return utilisateurRepository.save(utilisateur);
+    }
+
+    public void saveCsvDataFile(@PathVariable String csvfile) throws IOException {
+        utilisateurRepository.saveCsvDataFile(csvfile);
+    }
 
     /*public Utilisateur save(Utilisateur user) {
         if (user.getMot_de_passe_utilisateur() != null) {

@@ -52,7 +52,8 @@ public class Question {
         this.icone = icone;
     }
 
-    public Question(){}
+    public Question() {
+    }
 
     public Question(String libelle_question, Boolean isCheckbox, String icone) {
         this.libelle_question = libelle_question;

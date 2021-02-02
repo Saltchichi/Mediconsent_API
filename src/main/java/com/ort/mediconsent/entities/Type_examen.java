@@ -42,7 +42,8 @@ public class Type_examen {
         this.formulaire = formulaire;
     }
 
-    public Type_examen(){}
+    public Type_examen() {
+    }
 
     public Type_examen(String libelle_type_examen, Formulaire formulaire) {
         this.type_examen = libelle_type_examen;

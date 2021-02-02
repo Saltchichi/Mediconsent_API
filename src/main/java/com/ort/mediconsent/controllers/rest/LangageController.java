@@ -1,7 +1,7 @@
 package com.ort.mediconsent.controllers.rest;
 
 import com.ort.mediconsent.entities.Langage;
-import com.ort.mediconsent.repositories.LangageRepository;
+import com.ort.mediconsent.services.LangageServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,25 +11,25 @@ import java.util.List;
 @RestController
 public class LangageController {
     @Autowired
-    LangageRepository langageRepository;
+    LangageServices langageServices;
 
     @RequestMapping(path = "/rest/langages", method = RequestMethod.GET)
     public List<Langage> getLangages() {
-        return langageRepository.findAll();
+        return langageServices.findAll();
     }
 
     @RequestMapping(path = "/rest/langage/{id}", method = RequestMethod.GET)
     public Langage getLangage(@PathVariable Long id) {
-        return langageRepository.findById(id).orElse(null);
+        return langageServices.findById(id);
     }
 
     @RequestMapping(path = "/rest/langage/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable Long id) {
-        langageRepository.deleteById(id);
+        langageServices.deleteById(id);
     }
 
     @RequestMapping(path = "/rest/langage/save", method = RequestMethod.PUT)
     public Langage save(@RequestBody Langage langage) {
-        return langageRepository.save(langage);
+        return langageServices.save(langage);
     }
 }

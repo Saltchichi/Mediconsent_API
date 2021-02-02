@@ -30,7 +30,8 @@ public class Role {
         this.libelle_role = libelle_role;
     }
 
-    public Role(){}
+    public Role() {
+    }
 
     public Role(String libelle_role) {
         this.libelle_role = libelle_role;

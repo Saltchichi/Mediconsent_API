@@ -54,7 +54,8 @@ public class Reponse {
         this.reponse = reponse;
     }
 
-    public Reponse(){}
+    public Reponse() {
+    }
 
     public Reponse(Examen examen, Question question, String reponse) {
         this.examen = examen;

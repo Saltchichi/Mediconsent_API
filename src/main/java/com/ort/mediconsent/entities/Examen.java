@@ -122,7 +122,8 @@ public class Examen {
         this.date_annulation = date_annulation;
     }
 
-    public Examen(){}
+    public Examen() {
+    }
 
     public Examen(Type_examen type_examen, Etablissement etablissement, Avis avis, Date date_examen, Boolean consentement, String doc_consentement, String signature, Boolean annuler, Date date_annulation) {
         this.type_examen = type_examen;

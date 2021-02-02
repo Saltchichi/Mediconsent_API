@@ -65,7 +65,8 @@ public class Formulaire {
         this.date = date;
     }
 
-    public Formulaire() {}
+    public Formulaire() {
+    }
 
     public Formulaire(Langage langage, String libelle_formulaire, Float version, Date date) {
         this.langage = langage;

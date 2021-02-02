@@ -63,7 +63,8 @@ public class Etablissement {
         this.sigle_etablissement = sigle_etablissement;
     }
 
-    public Etablissement(){}
+    public Etablissement() {
+    }
 
     public Etablissement(String nom_etablissement, String adresse_etablissement, String telephone_etablissement, String sigle_etablissement) {
         this.nom_etablissement = nom_etablissement;
@@ -71,4 +72,5 @@ public class Etablissement {
         this.telephone_etablissement = telephone_etablissement;
         this.sigle_etablissement = sigle_etablissement;
     }
+
 }

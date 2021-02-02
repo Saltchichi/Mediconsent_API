@@ -63,7 +63,8 @@ public class Utilisateur {
         this.numero_securite_sociale = numero_securite_sociale;
     }
 
-    public Utilisateur() {}
+    public Utilisateur() {
+    }
 
     public Utilisateur(String nom_utilisateur, String prenom_utilisateur) {
         this.nom_utilisateur = nom_utilisateur;
@@ -72,7 +73,7 @@ public class Utilisateur {
 
     @Override
     public String toString() {
-        return "Utilisateur{"+"id=" + this.id_utilisateur
+        return "Utilisateur{" + "id=" + this.id_utilisateur
                 + ", nom='" + this.nom_utilisateur
                 + ", prenom='" + this.prenom_utilisateur
                 + ", n°Secu='" + this.numero_securite_sociale
