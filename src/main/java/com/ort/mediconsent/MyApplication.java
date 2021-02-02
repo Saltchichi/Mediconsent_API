@@ -14,9 +14,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories("com.ort.mediconsent.repositories")
 
 public class MyApplication extends SpringBootServletInitializer {
-    public static void main(String[] args) {
+
+    public static void main(String[] args)
+    {
         SpringApplication.run(MyApplication.class, args);
     }
+
     @Override
     protected SpringApplicationBuilder
     configure(SpringApplicationBuilder builder) {

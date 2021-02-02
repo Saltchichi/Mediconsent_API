@@ -11,10 +11,10 @@ import java.util.List;
 @Repository
 public interface EtablissementRepository extends JpaRepository<Etablissement, Long> {
 
-    @Query(value = "SELECT e.* FROM Etablissement e, Utilisateur u, Etablissement_utilisateur eu" +
+    @Query(value = "SELECT e.* FROM Etablissement e, Utilisateur u, Etablissement_utilisateur eu " +
             "WHERE e.id_etablissement = eu.id_etablissement " +
-            "AND WHERE :id_utilisateur = eu.id_utilisateur",
+            "AND eu.id_utilisateur = :id_utilisateur",
             nativeQuery = true)
-    List<Etablissement> findEtablissementByUtilisateur(@Param("id_utilisateur") int id_utilisateur);
+    List<Etablissement> findEtablissementByUtilisateur(@Param("id_utilisateur") Long id_utilisateur);
 
 }
