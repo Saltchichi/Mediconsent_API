@@ -34,7 +34,7 @@ public class EtablissementController {
     }
 
     @RequestMapping(path = "/rest/etablissement/utilisateur/{id}", method = RequestMethod.GET)
-    public List<Etablissement> findEtablissementByUtilisateur(@PathVariable Long id) {
+    public Etablissement findEtablissementByUtilisateur(@PathVariable Long id) {
         return etablissementServices.findEtablissementByUtilisateur(id);
     }
 }

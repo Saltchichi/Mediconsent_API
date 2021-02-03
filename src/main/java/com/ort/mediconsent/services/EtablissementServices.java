@@ -31,7 +31,7 @@ public class EtablissementServices {
         return etablissementRepository.save(etablissement);
     }
 
-    public List<Etablissement> findEtablissementByUtilisateur(@Param("id_utilisateur") Long id_utilisateur){
+    public Etablissement findEtablissementByUtilisateur(@Param("id_utilisateur") Long id_utilisateur){
         return etablissementRepository.findEtablissementByUtilisateur(id_utilisateur);
     }
 
