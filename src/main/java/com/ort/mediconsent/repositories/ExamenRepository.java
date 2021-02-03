@@ -27,4 +27,10 @@ public interface ExamenRepository extends JpaRepository<Examen, Long> {
             nativeQuery = true)
     Collection<Examen> findExamensByEtablissement(@Param("id_etablissement") Long id_etablissement);
 
+    @Query(value = "SELECT e.* FROM examen e, utilisateur u, utilisateur_examen ue " +
+            "WHERE e.id_examen = ue.id_examen " +
+            "AND ue.id_utilisateur = :id_utilisateur",
+            nativeQuery = true)
+    Collection<Examen> findExamensByUtilisateur(@Param("id_utilisateur") Long id_utilisateur);
+
 }

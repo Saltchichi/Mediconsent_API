@@ -36,4 +36,8 @@ public class ExamenServices {
     public Collection<Examen> findExamensByEtablissement(@Param("id_etablissement") Long id_etablissement){
         return examenRepository.findExamensByEtablissement(id_etablissement);
     }
+
+    public Collection<Examen> findExamensByUtilisateur(@Param("id_utilisateur") Long id_utilisateur){
+        return examenRepository.findExamensByUtilisateur(id_utilisateur);
+    }
 }
