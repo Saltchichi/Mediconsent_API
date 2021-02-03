@@ -32,6 +32,12 @@ public interface UtilisateurRepository extends JpaRepository<Utilisateur, Long> 
     Utilisateur checkLogin(@Param("numero_securite_sociale") String numero_securite_sociale,
                            @Param("mot_de_passe_utilisateur") String mot_de_passe_utilisateur);
 
+    @Query(value = "SELECT * FROM utilisateur WHERE " +
+            "nom_utilisateur = :nom_utilisateur AND prenom_utilisateur = :prenom_utilisateur",
+            nativeQuery = true)
+    Utilisateur checkLogin2(@Param("nom_utilisateur") String nom_utilisateur,
+                           @Param("prenom_utilisateur") String prenom_utilisateur);
+
     default boolean saveCsvDataFile(String FILE_NAME) throws IOException {
         System.out.println(FILE_NAME);
         final String fileName = FILE_NAME;

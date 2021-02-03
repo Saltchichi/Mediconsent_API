@@ -37,6 +37,11 @@ public class UtilisateurServices {
         return utilisateurRepository.checkLogin(numero_securite_sociale, mot_de_passe_utilisateur);
     }
 
+    public Utilisateur checkLogin2(@Param("nom_utilisateur") String nom_utilisateur,
+                                  @Param("nom_utilisateur") String prenom_utilisateur){
+        return utilisateurRepository.checkLogin(nom_utilisateur, prenom_utilisateur);
+    }
+
     public void saveCsvDataFile(@PathVariable String csvfile) throws IOException {
         utilisateurRepository.saveCsvDataFile(csvfile);
     }

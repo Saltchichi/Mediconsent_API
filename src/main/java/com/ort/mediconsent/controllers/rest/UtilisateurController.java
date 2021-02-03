@@ -46,4 +46,10 @@ public class UtilisateurController {
         return utilisateurServices.checkLogin(numero_securite_sociale, mot_de_passe_utilisateur);
     }
 
+    @RequestMapping(path = "/rest/checkLogin2/{nom_utilisateur}/{prenom_utilisateur}", method = RequestMethod.GET)
+    public Utilisateur checkLogin2(@PathVariable String nom_utilisateur,
+                                  @PathVariable String prenom_utilisateur) {
+        return utilisateurServices.checkLogin(nom_utilisateur, prenom_utilisateur);
+    }
+
 }
