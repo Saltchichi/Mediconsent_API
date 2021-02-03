@@ -23,7 +23,7 @@ public interface ExamenRepository extends JpaRepository<Examen, Long> {
 
     Examen save(@RequestBody Examen examen);
 
-    @Query(value = "SELECT * FROM Examen WHERE id_etablissement = :id_etablissement",
+    @Query(value = "SELECT * FROM examen WHERE id_etablissement = :id_etablissement",
             nativeQuery = true)
     Collection<Examen> findExamensByEtablissement(@Param("id_etablissement") Long id_etablissement);
 

@@ -22,7 +22,7 @@ public interface EtablissementRepository extends JpaRepository<Etablissement, Lo
 
     Etablissement save(@RequestBody Etablissement etablissement);
 
-    @Query(value = "SELECT e.* FROM Etablissement e, Utilisateur u, Etablissement_utilisateur eu " +
+    @Query(value = "SELECT e.* FROM etablissement e, utilisateur u, etablissement_utilisateur eu " +
             "WHERE e.id_etablissement = eu.id_etablissement " +
             "AND eu.id_utilisateur = :id_utilisateur",
             nativeQuery = true)
