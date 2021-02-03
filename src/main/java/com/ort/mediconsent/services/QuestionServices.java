@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -33,7 +34,7 @@ public class QuestionServices {
         return questionRepository.save(question);
     }
 
-    public List<Question> findQuestionsByFormulaire(@Param("id_formulaire") Long id_formulaire){
+    public Collection<Question> findQuestionsByFormulaire(@Param("id_formulaire") Long id_formulaire){
         return questionRepository.findQuestionsByFormulaire(id_formulaire);
     }
 

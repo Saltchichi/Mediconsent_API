@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @CrossOrigin
@@ -35,7 +36,7 @@ public class QuestionController {
     }
 
     @RequestMapping(path = "/rest/questions/formulaire/{id}", method = RequestMethod.GET)
-    public List<Question> findQuestionsByFormulaire(@Param("id_formulaire") Long id_formulaire){
-        return questionServices.findQuestionsByFormulaire(id_formulaire);
+    public Collection<Question> findQuestionsByFormulaire(@PathVariable Long id){
+        return questionServices.findQuestionsByFormulaire(id);
     }
 }

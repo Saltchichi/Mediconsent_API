@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,10 +23,10 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
 
     Question save(@RequestBody Question question);
 
-    @Query(value = "SELECT q.* FROM Question q, Formulaire f, Question_formulaire qf " +
+    @Query(value = "SELECT DISTINCT q.* FROM Question q, Formulaire f, Question_formulaire qf " +
             "WHERE q.id_question = qf.id_question " +
             "AND qf.id_formulaire = :id_formulaire",
             nativeQuery = true)
-    List<Question> findQuestionsByFormulaire(@Param("id_formulaire") Long id_formulaire);
+    Collection<Question> findQuestionsByFormulaire(@Param("id_formulaire") Long id_formulaire);
 
 }

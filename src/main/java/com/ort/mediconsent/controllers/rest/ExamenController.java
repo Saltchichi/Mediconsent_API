@@ -1,10 +1,12 @@
 package com.ort.mediconsent.controllers.rest;
 
 import com.ort.mediconsent.entities.Examen;
+import com.ort.mediconsent.entities.Question;
 import com.ort.mediconsent.services.ExamenServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Collection;
 import java.util.List;
 
 @CrossOrigin
@@ -31,5 +33,10 @@ public class ExamenController {
     @RequestMapping(path = "/rest/examen/save", method = RequestMethod.PUT)
     public Examen save(@RequestBody Examen examen) {
         return examenServices.save(examen);
+    }
+
+    @RequestMapping(path = "/rest/examens/etablissement/{id}", method = RequestMethod.GET)
+    public Collection<Examen> findExamensByEtablissement(@PathVariable Long id){
+        return examenServices.findExamensByEtablissement(id);
     }
 }
