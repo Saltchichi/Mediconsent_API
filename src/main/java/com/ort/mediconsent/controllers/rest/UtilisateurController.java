@@ -1,5 +1,6 @@
 package com.ort.mediconsent.controllers.rest;
 
+import com.ort.mediconsent.entities.Etablissement;
 import com.ort.mediconsent.entities.Utilisateur;
 import com.ort.mediconsent.services.UtilisateurServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +40,10 @@ public class UtilisateurController {
         utilisateurServices.saveCsvDataFile(csvfile);
     }
 
-    /*@RequestMapping(path = "/rest/utilisateur/connect/{numero_securite_sociale}", method = RequestMethod.GET)
-    public boolean connect(@PathVariable Long numero_securite_sociale){
-        return utilisateurRepository.connect(numero_securite_sociale);
-    }*/
+    @RequestMapping(path = "/rest/checkLogin/{numero_securite_sociale}/{mot_de_passe_utilisateur}", method = RequestMethod.GET)
+    public Utilisateur checkLogin(@PathVariable String numero_securite_sociale,
+                                  @PathVariable String mot_de_passe_utilisateur) {
+        return utilisateurServices.checkLogin(numero_securite_sociale, mot_de_passe_utilisateur);
+    }
+
 }

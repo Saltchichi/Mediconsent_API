@@ -3,6 +3,7 @@ package com.ort.mediconsent.services;
 import com.ort.mediconsent.entities.Utilisateur;
 import com.ort.mediconsent.repositories.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +30,11 @@ public class UtilisateurServices {
 
     public Utilisateur save(@RequestBody Utilisateur utilisateur) {
         return utilisateurRepository.save(utilisateur);
+    }
+
+    public Utilisateur checkLogin(@Param("numero_securite_sociale") String numero_securite_sociale,
+                                  @Param("mot_de_passe_utilisateur") String mot_de_passe_utilisateur){
+        return utilisateurRepository.checkLogin(numero_securite_sociale, mot_de_passe_utilisateur);
     }
 
     public void saveCsvDataFile(@PathVariable String csvfile) throws IOException {
