@@ -38,8 +38,8 @@ public class UtilisateurServices {
     }
 
     public Utilisateur checkLogin2(@Param("nom_utilisateur") String nom_utilisateur,
-                                  @Param("nom_utilisateur") String prenom_utilisateur){
-        return utilisateurRepository.checkLogin(nom_utilisateur, prenom_utilisateur);
+                                  @Param("mot_de_passe_utilisateur") String mot_de_passe_utilisateur){
+        return utilisateurRepository.checkLogin2(nom_utilisateur, mot_de_passe_utilisateur);
     }
 
     public void saveCsvDataFile(@PathVariable String csvfile) throws IOException {
