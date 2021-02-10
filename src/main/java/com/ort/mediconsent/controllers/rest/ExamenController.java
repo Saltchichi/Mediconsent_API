@@ -42,6 +42,11 @@ public class ExamenController {
 
     @RequestMapping(path = "/rest/examens/utilisateur/{id}", method = RequestMethod.GET)
     public Collection<Examen> findExamensByUtilisateur(@PathVariable Long id){
-        return examenServices.findExamensByEtablissement(id);
+        return examenServices.findExamensByUtilisateur(id);
+    }
+
+    @RequestMapping(path = "/rest/examen/{prenom}/{nom}", method = RequestMethod.GET)
+    public Collection<Examen> findExamensByPrenomNom(@PathVariable String prenom, @PathVariable String nom) {
+        return examenServices.findExamensByPrenomNom(prenom, nom);
     }
 }

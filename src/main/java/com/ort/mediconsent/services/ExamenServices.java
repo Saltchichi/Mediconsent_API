@@ -40,4 +40,8 @@ public class ExamenServices {
     public Collection<Examen> findExamensByUtilisateur(@Param("id_utilisateur") Long id_utilisateur){
         return examenRepository.findExamensByUtilisateur(id_utilisateur);
     }
+
+    public Collection<Examen> findExamensByPrenomNom(@PathVariable String prenom, @PathVariable String nom) {
+        return examenRepository.findExamensByPrenomNom(prenom, nom);
+    }
 }
