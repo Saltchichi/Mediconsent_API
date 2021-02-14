@@ -30,11 +30,11 @@ public interface QuestionRepository extends JpaRepository<Question, Long> {
     Collection<Question> findQuestionsByFormulaire(@Param("id_formulaire") Long id_formulaire);
 
     //TODO mauvaise requete, à revoir avec Arnaud j'ai pas compris ce qu'il voulait.
-    @Query(value = "SELECT DISTINCT q.* FROM question q, formulaire f, question_formulaire qf " +
-            "WHERE q.id_question = qf.id_question " +
-            "AND qf.id_formulaire = :id_formulaire",
-            nativeQuery = true)
-    Collection<Question> findQuestionsByFormulaireTypeExamen(@Param("id_formulaire") Long id_formulaire,
-                                                   @Param("id_type_examen") Long id_type_examen);
+//    @Query(value = "SELECT DISTINCT q.* FROM question q, formulaire f, question_formulaire qf " +
+//            "WHERE q.id_question = qf.id_question " +
+//            "AND qf.id_formulaire = :id_formulaire",
+//            nativeQuery = true)
+//    Collection<Question> findQuestionsByFormulaireTypeExamen(@Param("id_formulaire") Long id_formulaire,
+//                                                   @Param("id_type_examen") Long id_type_examen);
 
 }

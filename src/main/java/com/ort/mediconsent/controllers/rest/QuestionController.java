@@ -40,8 +40,8 @@ public class QuestionController {
         return questionServices.findQuestionsByFormulaire(id_formulaire);
     }
 
-    @RequestMapping(path = "/rest/questions/formulaire/{id_formulaire}/{id_type_examen}", method = RequestMethod.GET)
-    public Collection<Question> findQuestionsByFormulaireTypeExamen(@PathVariable Long id_formulaire, @PathVariable Long id_type_examen){
-        return questionServices.findQuestionsByFormulaireTypeExamen(id_formulaire, id_type_examen);
-    }
+//    @RequestMapping(path = "/rest/questions/formulaire/{id_formulaire}/{id_type_examen}", method = RequestMethod.GET)
+//    public Collection<Question> findQuestionsByFormulaireTypeExamen(@PathVariable Long id_formulaire, @PathVariable Long id_type_examen){
+//        return questionServices.findQuestionsByFormulaireTypeExamen(id_formulaire, id_type_examen);
+//    }
 }

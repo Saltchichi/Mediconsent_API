@@ -38,9 +38,9 @@ public class QuestionServices {
         return questionRepository.findQuestionsByFormulaire(id_formulaire);
     }
 
-    public Collection<Question> findQuestionsByFormulaireTypeExamen(@Param("id_formulaire") Long id_formulaire,
-                                                          @Param("id_type_examen") Long id_type_examen){
-        return questionRepository.findQuestionsByFormulaireTypeExamen(id_formulaire, id_type_examen);
-    }
+//    public Collection<Question> findQuestionsByFormulaireTypeExamen(@Param("id_formulaire") Long id_formulaire,
+//                                                          @Param("id_type_examen") Long id_type_examen){
+//        return questionRepository.findQuestionsByFormulaireTypeExamen(id_formulaire, id_type_examen);
+//    }
 
 }
