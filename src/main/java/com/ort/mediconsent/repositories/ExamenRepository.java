@@ -46,6 +46,6 @@ public interface ExamenRepository extends JpaRepository<Examen, Long> {
             "    AND e.annuler = 0",
             nativeQuery = true)
     Collection<Examen> findExamensByPrenomNom(@Param("prenom") String prenom,
-                                       @Param("nom") String nom);
+                                              @Param("nom") String nom);
 
 }
