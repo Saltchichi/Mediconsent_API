@@ -30,11 +30,11 @@ public class Type_examen {
     }
 
     public String getLibelle_type_examen() {
-        return type_examen;
+        return libelle_type_examen;
     }
 
     public void setLibelle_type_examen(String libelle_type_examen) {
-        this.type_examen = libelle_type_examen;
+        this.libelle_type_examen = libelle_type_examen;
     }
 
     public Formulaire getFormulaire() {
